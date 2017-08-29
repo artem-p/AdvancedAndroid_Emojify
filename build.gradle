@@ -16,6 +16,11 @@ allprojects {
     repositories {
         jcenter()
     }
+
+    if (IS_WINDOWS) {
+        // https://stackoverflow.com/questions/41267005/failed-to-crunch-file-android-studio-appmergedebugresources
+        buildDir = "D:/android_build/${rootProject.name}/${project.name}"
+    }
 }
 
 task clean(type: Delete) {
