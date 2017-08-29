@@ -16,6 +16,10 @@ allprojects {
     repositories {
         jcenter()
     }
+
+    if (IS_WINDOWS) {
+        allprojects { buildDir = "D:/android_build/${rootProject.name}/${project.name}" }
+    }
 }
 
 task clean(type: Delete) {
