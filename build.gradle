@@ -17,8 +17,8 @@ allprojects {
         jcenter()
     }
 
-    if (IS_WINDOWS) {
-        allprojects { buildDir = "D:/android_build/${rootProject.name}/${project.name}" }
+    if (IS_WINDOWS.toBoolean()) {
+        buildDir = "D:/android_build/${rootProject.name}/${project.name}"
     }
 }
 
